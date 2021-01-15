@@ -1,0 +1,8 @@
+C:\'Program Files'\LTC\LTspiceXVII\XVIIx64.exe
+822, 489
+55, 13
+378, 62
+1030
+960, 252
+1011, 557
+1250, 709

@@ -1,0 +1,25 @@
+Setup for iteration.py:
+File location holding time-temperature data for each layer of the cable. Ensure any slashes are forward '/'.
+temperature data csv = D:/Work/CCI/hvdc_field_program/datafiles/tempdata_example.csv
+
+Format of the output files where {} is the number of the iteration
+output file name format = D:/Work/CCI/hvdc_field_program/dump/test_run_{}
+
+Number of times that the program is rerun
+number of iterations = 3
+
+Data for the radii of the layers in the form: start, stop, difference
+radius data = 22.375,40.7,1.8325
+
+Data for the resistors R1 --> R5
+resistivty data = 3.33333E+16,1.43062E+13,4.56621E+13,1.47493E+14,3.15457E+14
+temperature coefficient of resistivity data = 0.113,0.0062,0.01,0.011,0.0076
+
+Value used in the field dependancy of resistance
+gamma = 0.03
+
+File containing the capacitance values as required by complex_generator.py
+capacitances = D:/Work/CCI/hvdc_field_program/datafiles/capacitance_example.csv
+
+Comma separated list of times which are of interest. The field at these points will be output in a smaller csv file.
+times = 0,3600,4500

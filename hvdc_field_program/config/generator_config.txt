@@ -1,0 +1,26 @@
+Setup for complex_generator.py:
+
+Dictates the values of the voltage source. 
+There are 2 modes var and const:
+    const: 1 constant voltage given after comma.
+    var: A variable piecewise linear function. Takes time voltage pairs separated by a space. 
+         The voltage output is interpolated between pairs.
+Examples
+    const, 262.5k  ---  Constant value of 262.5kV 
+    var, 0 0 1 400k 14400 400k 14401 0  ---  Voltage starts at 0V and rises to 400kV over 1 second.
+                                             The voltage stays at 400kV for 4 hours then it drops
+                                             back to 0V over 1 second.
+
+voltage = var, 0 400k 3599 400k 3600 0 3720 0 3721 -400k
+
+The value of the resistance in series with the voltage source. Defaults to 0 if left out.
+parasitic resistance = 10
+
+Time to start saving data, the end of the simulation and the maximum time step.
+time start = 0
+time stop = 4500
+time step = 0.5
+
+The number of consecutive points that can be combined in the export file. Larger numbers result in a 
+smaller export file. Defaults to 16 if left out.
+compression = 1
